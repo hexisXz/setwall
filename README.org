@@ -3,7 +3,7 @@
 paste this script in your terminal
 
 #+BEGIN_src bash
-curl -L -O " && bash install.sh
+curl -L -O "https://raw.githubusercontent.com/hexisXz/setwall/main/install.sh' && sudo bash install.sh
 
 
 
