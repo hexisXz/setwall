@@ -1,0 +1,10 @@
+* how to install 
+
+paste this script in your terminal
+
+#+BEGIN_src bash
+curl -L -O " && bash install.sh
+
+
+
+

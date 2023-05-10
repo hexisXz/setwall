@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# to get the program "pywal" type 'pip install pywal'
+
+
+# wayland 
+f=$(ls ~/.config/wallpapers/ | fzf) ; pkill swaybg && swaybg -i ~/.config/wallpapers/$f &
+
+wal -i ~/.config/wallpapers/$f && echo "wal -i ~/.config/wallpapers/$f && clear" > ~/.config/themes/themes.sh
+
+
+
+# xorg
+#f=$(ls ~/.config/wallpapers/ | fzf) ; xwallpaper --zoom ~/.config/wallpapers/$f &
+
+#wal -i ~/.config/wallpapers/$f && echo "wal -i ~/.config/wallpapers/$f && clear" > ~/stuff/themes.sh
+
+
+
+
+
