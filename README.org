@@ -19,3 +19,12 @@ pip install pywal
 
 you also need fzf. it should be in your distros repos.
 
+
+
+* keeping the theme 
+
+for the theme to stay on each terminal paste this in your bashrc or zshrc 
+
+#+BEGIN_src bash
+source ~/.config/themes/themes.sh
+#+END_src
