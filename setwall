@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# to get the program "pywal" type 'pip install pywal'
-
-
 # wayland 
 f=$(ls ~/.config/wallpapers/ | fzf) ; pkill swaybg && swaybg -i ~/.config/wallpapers/$f &
 
