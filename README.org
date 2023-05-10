@@ -3,7 +3,7 @@
 paste this script in your terminal
 
 #+BEGIN_src bash
-curl -L -O "https://raw.githubusercontent.com/hexisXz/setwall/main/install.sh" && sudo bash install.sh
+curl -L -O "https://raw.githubusercontent.com/hexisXz/setwall/main/install.sh" && bash install.sh
 #+END_SRC
 
 * dependencies
@@ -15,4 +15,7 @@ pywal is needed for setwall to work, to install pywal install pip and paste this
 #+BEGIN_src bash
 pip install pywal
 #+END_src
+
+
+you also need fzf. it should be in your distros repos.
 
