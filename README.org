@@ -1,5 +1,5 @@
 * before you install
-if you arent on wayland you need to vim into setwall in /bin and comment out the wayland part and uncomment the xorg part
+if you aren't on wayland you need to vim into setwall in /bin and comment out the wayland part and uncomment the xorg part
 
 * how to install 
 
