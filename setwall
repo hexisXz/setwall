@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# wayland 
-f=$(ls ~/.config/wallpapers/ | fzf) ; pkill swaybg && swaybg -i ~/.config/wallpapers/$f &
-
-wal -i ~/.config/wallpapers/$f && echo "wal -i ~/.config/wallpapers/$f && clear" > ~/.config/themes/themes.sh
-
-
-
-# xorg
-#f=$(ls ~/.config/wallpapers/ | fzf) ; xwallpaper --zoom ~/.config/wallpapers/$f &
-
-#wal -i ~/.config/wallpapers/$f && echo "wal -i ~/.config/wallpapers/$f && clear" > ~/stuff/themes.sh
-
-
-
+f=$(ls ~/.config/wallpapers/ | rofi -theme arthur -dmenu -i -selected-row 1 -p "wallpaper:")  ; xwallpaper --zoom ~/.config/wallpapers/$f
 
 
