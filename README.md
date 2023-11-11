@@ -4,5 +4,9 @@ curl -L -O "https://raw.githubusercontent.com/hexisXz/setwall/main/install.sh" &
 ```
 
 # dependencies
+feh and fzf 
 
-xwallpaper & polybar 
+
+# wallpapers
+
+you can place your own wallpapers in ~/.config/wallpapers or just keep the default :)

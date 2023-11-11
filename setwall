@@ -1,5 +1,95 @@
-#!/bin/bash
+#!/bin/sh
 
-f=$(ls ~/.config/wallpapers/ | rofi -theme arthur -dmenu -i -selected-row 1 -p "wallpaper:")  ; xwallpaper --zoom ~/.config/wallpapers/$f
 
+# set the wallpaper 
+setwallpaper() {
+	f=$(ls ~/.config/wallpapers/ | fzf) ; feh --bg-fill ~/.config/wallpapers/$f
+}
+
+
+
+# set random wallpaper
+randomwallpaper() {
+       while true; do 
+       feh --bg-fill --randomize  ~/.config/wallpapers/* 
+       sleep 60 
+
+done
+}	
+
+
+
+# random wallpaper time 5 seconds
+randomwallpaper_time_short() {
+	while true; do 
+        feh --bg-fill --randomize  ~/.config/wallpapers/* 
+        sleep 5
+
+done
+}
+
+
+# random wallpaper time 1 hour 
+randomwallpaper_time_long() {
+	while true; do 
+        feh --bg-fill --randomize  ~/.config/wallpapers/* 
+        sleep 3600 
+
+done
+}
+
+
+# kill the program
+killsetwall() {
+	pkill setwall
+}
+
+
+
+# program info 
+programhelp() {
+	echo -e "usage: s: set wallpaper
+      
+       r: random wallpaper
+       
+       rs: set wallpaper every 5 seconds
+       
+       rl: set the wallpaper every hour"
+ }
+
+
+
+# flags
+case $1 in
+	s)
+	 setwallpaper
+	;;
+
+	r)
+	 randomwallpaper &
+	;;
+
+       rs)
+	 randomwallpaper_time_short & 
+        ;;
+
+       rl)
+	 randomwallpaper_time_long &
+	;;
+
+        k)
+	 killsetwall
+	;;
+
+ 	h)
+	 programhelp
+	;;
+
+        *)
+	 programhelp
+	;;
+esac
+
+
+	 
 
